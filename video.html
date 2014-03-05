@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sea-level rise video with alpha transparency</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    <link rel="stylesheet" href="css/video.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.2/d3.min.js"></script>
+  </head>
+  <body>
+
+    <div id="map"></div>
+
+    <div id="hidden">
+      <video id="video"  autoplay loop>
+        <!-- http://stackoverflow.com/questions/8088364/html5-video-will-not-loop -->
+        <source src="video/test3.mp4" type='video/mp4; codecs="h.264"' />
+        <source src="video/test3.ogv" type='video/ogg; codecs="theora, vorbis"' />
+      </video>
+      <!-- <\!-- Rendered video (alpha + video) -\-> -->
+      <canvas id="output" width="1080" height="915"></canvas>
+      <!-- <canvas id="output" width="640" height="480"></canvas> -->
+      <!-- Raw video (alpha below video) -->
+      <!-- <canvas id="buffer"width="640" height="960"></canvas> -->
+      <canvas id="buffer"width="1080" height="1830"></canvas>
+    </div>
+    <script src="js/video.js"></script>
+  </body>
+</html>
