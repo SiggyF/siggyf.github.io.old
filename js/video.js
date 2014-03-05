@@ -126,6 +126,5 @@
         interval = setInterval(processFrame, 50)
     }, false);
 
-    video.play();
 
 })();

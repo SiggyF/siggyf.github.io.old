@@ -6,7 +6,10 @@
     width:640px;
     height:960px;
 }
-#video, #buffer, #output {
+#video {
+/* display for debugging */
+}
+#buffer, #output {
     display: none;
 }
 canvas.leaflet-tile.leaflet-tile-loaded {
