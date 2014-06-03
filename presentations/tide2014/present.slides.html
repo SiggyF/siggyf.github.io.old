@@ -150,6 +150,7 @@ Warning: record 1 did not parse according to the supplied definition file
 </section>
 
         </section>
+        
         <section>
           <section>
             <h2>Other packages</h2>
@@ -159,12 +160,60 @@ Warning: record 1 did not parse according to the supplied definition file
             <h2>Pytides</h2>
             <ul>
               <li>https://github.com/sam-cox/pytides</li>
+              <li>Pytides is in its infancy</li>
+              <li>Author sam.cox@cantab.net</li>
+            </ul>
+          </section>
 
+
+        </section>
+        <section>
+          <section>
+            <h2>Tide Web Processing Service</h2>
+            <p>Msc of Joost Boerboom</p>
+          </section>
+          <section>
+            <h2>Source</h2>
+            <p>OSU, http://volkov.oce.orst.edu/tides/</p>
+            <p><img src="figures/osu.png" alt="" /></p>
+          </section>
+          <section>
+            <h2>Calls</h2>
+            <p><a href="http://dtvirt5.deltares.nl/wps/?request=GetCapabilities&service=wps&version=1.0.0">http://dtvirt5.deltares.nl/wps/?request=GetCapabilities&service=wps&version=1.0.0</a></p>
+            <p><a href="http://dtvirt5.deltares.nl/wps/?request=DescribeProcess&service=wps&version=1.0.0&identifier=tidal_predict">http://dtvirt5.deltares.nl/wps/?request=DescribeProcess&service=wps&version=1.0.0&identifier=tidal_predict</a></p>
+            <p><a href="http://dtvirt5.deltares.nl/wps?request=Execute&identifier=tidal_predict&service=wps&version=1.0.0&datainputs=[location=LINESTRING(1%2020,%202%2052,3%2053);startdate=2000-01-01;enddate=2000-01-03]">http://dtvirt5.deltares.nl/wps?
+                request=Execute
+                &identifier=tidal_predict
+                &service=wps&version=1.0.0
+                &datainputs=[location=LINESTRING(1 20, 2 52,3 53);
+                startdate=2000-01-01;
+                enddate=2000-01-03
+                ]</a></p>
+          </section>
+          <section>
+            <h2>Processes</h2>
+            <p><img src="figures/steps.png" alt="" /></p>
+          </section>
+          <section>
+            <h2>Validation</h2>
+            <p><img src="figures/wpsvalidation.png" alt="" /></p>
+          </section>
+          <section>
+            <h2>Nice</h2>
+            <ul>
+              <li>Global coverage</li>
+              <li>Fast</li>
+              <li>No local data</li>
+              <li>Tracks</li>
+            </ul>
+            <h2>Not so nice</h2>
+            <ul>
+              <li>Only 15 components</li>
+              <li>Uses part of tappy, not properly published.</li>
             </ul>
           </section>
         </section>
         
-
         
 
       </div>
