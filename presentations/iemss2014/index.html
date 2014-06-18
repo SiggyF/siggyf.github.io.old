@@ -84,11 +84,13 @@
     <h2>2D</h2>
     <video controls>
       <source src="movies/haaglanden.mp4" />
+      <source src="movies/haaglanden.webm" />
     </video>
   </section>
   <section>
     <h2>1D</h2>
     <video controls>
+      <source src="movies/duifpolder.mp4" />
       <source src="movies/duifpolder.webm" />
     </video>
   </section>
@@ -205,6 +207,20 @@ model.get_var("pumps") # -> "dataframe"
     <h2>Architecture</h2>
     <p><img src="images/arch.png" class="" alt="" /></p>
   </section>
+
+  <section>
+    <h2>Model Messages Interface</h2>
+    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+{
+  'shape': [30000,2], 
+  'dtype': 'float64', 
+  'standard_name': 'sea_surface_altitude', 
+  'units': 'm'
+}
+\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3
+    </code></pre>            
+  </section>
+
 </section>
 
 <section>
@@ -237,7 +253,9 @@ model.get_var("pumps") # -> "dataframe"
     <ul>
       <li>Local authority</li>
       <li>Planning sessions</li>
+      <li>General public</li>
       <li><del>modellers</del></li>
+      
     </ul>
     
   </section>
@@ -253,9 +271,10 @@ model.get_var("pumps") # -> "dataframe"
     <p><img src="images/ipad.png" class="" alt="" /></p>
   </section>
   <section>
-    <h2>End user: general public</h2>
+    <h2>General public</h2>
     <video controls>
       <source src="movies/render.mp4" />
+      <source src="movies/render.webm" />
     </video>
   </section>
 
@@ -305,6 +324,17 @@ model.get_var("pumps") # -> "dataframe"
       </tr>
     </table>
   </section>
+  <section>
+    <h2>Cloud</h2>
+  </section>
+  <section>
+    <h2>Amsterdam</h2>
+    <p><img src="images/server2.jpg" class="" alt="" /></p>
+  </section>
+  <section>
+    <h2>Amazon</h2>
+    <p><img src="images/clusterstart.png" class="" alt="" /></p>
+  </section>
 
   <section>
     <h2>Communication</h2>
@@ -324,29 +354,6 @@ model.get_var("pumps") # -> "dataframe"
     <h2>Pushing</h2>
     <p><img src="images/push.png" class="" alt=""/></p>
   </section>
-  <section>
-    <h2>Model Messages Interface</h2>
-    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-        {
-        'shape': [30000,2], 
-        'dtype': 'float64', 
-        'standard_name': 'sea_surface_altitude', 
-        'units': 'm'
-        }
-        \x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3
-    </code></pre>            
-  </section>
-  <section>
-    <h2>Cloud</h2>
-  </section>
-  <section>
-    <h2>Amsterdam</h2>
-    <p><img src="images/server2.jpg" class="" alt="" /></p>
-  </section>
-  <section>
-    <h2>Amazon</h2>
-    <p><img src="images/clusterstart.png" class="" alt="" /></p>
-  </section>
 
 
 </section>        
@@ -360,7 +367,26 @@ model.get_var("pumps") # -> "dataframe"
   </section>
   <section>
     <h3>Automate everything!</h3>
-    <img src="images/provisioning.png" class="" alt="" />
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+---
+- name: Make the wps virtualenv
+command: mkdir  ~/venvs creates=~/venvs
+command: mkdir ~/src creates=~/src
+command: virtualenv ~/venvs/3di creates=~/venvs/3di
+
+- name: Download OpenEarthTools package
+subversion: repo=https://svn.oss.deltares.nl/repos/openearthtools
+
+# easy packages
+- name: Install python packages
+pip: name={{ item }} virtualenv=~/venvs/3di
+with_items:
+- numpy
+- shapely
+- pandas
+- lxml
+- gunicorn
+</code></pre>
   </section>
   <section>
     <h2>Preparing models</h2>
@@ -379,12 +405,6 @@ model.get_var("pumps") # -> "dataframe"
     <img src="images/factory2.jpg" class="" alt="" />
   </section>
 
-  <section>
-    <h2>Scriptability</h2>
-    <video controls>
-      <source src="movies/sfo.mp4" />
-    </video>
-  </section>
 </section>
 <section>
   <section>
@@ -394,6 +414,15 @@ model.get_var("pumps") # -> "dataframe"
     <p>github.com/nens</p>
     <p>github.com/lizard</p>
   </section>
+
+  <section>
+    <video controls>
+      <source src="movies/sfo.mp4" />
+      <source src="movies/sfo.webm" />
+    </video>
+    <p>Alcatraz</p>
+  </section>
+
 </section>
 
 
