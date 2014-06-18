@@ -44,459 +44,397 @@
       <div class="slides">
 	<section>
 	  <h1 title="Interactive web-based flood modeling at country wide scale and planter size resolution">Interactive web-based flood modeling</h>
-	  <h3>Fedor Baart</h3>
-          <p>K. K. Ha, A. van Dam, G. Donchyts, M. Siemerink </p>
-	</section>
+<h3>Fedor Baart</h3>
+<p>K. K. Ha, A. van Dam, G. Donchyts, M. Siemerink </p>
+</section>
 
-        <section>
-          <section>
-            <h2>Trends in modelling</h2>
-          </section>
-          <section>
-            <table>
-              <tr>
-                <td>Passive</td><td>&rarr;</td><td>Interactive</td>
-              </tr>
-              <tr>
-                <td>Mono-displinary</td><td>&rarr;</td><td>Integrated</td>
-              </tr>
-              <tr>
-                <td width="30%">Solitary</td><td width="20%">&rarr;</td><td width="30%">Social</td>
-              </tr>
-              <tr>
-                <td width="30%">Local</td><td width="20%">&rarr;</td><td width="30%">Remote</td>
-              </tr>
-              <tr>
-                <td width="30%">Handcrafted</td><td width="20%">&rarr;</td><td width="30%">Industrialized</td>
-              </tr>
-            </table>
-          </section>
-        </section>
-        <section>
-          <section>
-            <table>
-              <tr>
-                <td width="30%">Passive</td><td width="20%">&rarr;</td><td width="30%">Interactive</td>
-              </tr>
-            </table>
-          </section>
-          <section>
-            <h2>Feel the model.</h2>
-            <p><img src="images/interactive.jpg" class="" alt="" /></p>
-          </section>
-          <section>
-            <h2>Old</h2>
-            <p><img src="images/feedback1.png" class="" alt="" /></p>
-          </section>
-          <section>
-            <h2>New</h2>
-            <p><img src="images/feedback2.png" class="" alt="" /></p>
-          </section>
-          <section>
-            \[\begin{aligned}
-	    time_{interaction} &amp; \downarrow 0.1s \\
-	    \end{aligned} \]
-          </section>
+<section>
+  <section>
+    <h2>3di.nu/international</h2>
+    
+    <p><img src="images/3dilogo.svg" style="height:200px"/></p>
+    <ul>
+      <li>Deltares</li>
+      <li>Neelen and Schuurmans</li>
+      <li>Delft University of Technology</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Trends in modelling</h2>
+    <table>
+      <tr>
+        <td>Passive</td><td>&rarr;</td><td>Interactive</td>
+      </tr>
+      <tr>
+        <td>Mono-displinary</td><td>&rarr;</td><td>Integrated</td>
+      </tr>
+      <tr>
+        <td width="30%">Solitary</td><td width="20%">&rarr;</td><td width="30%">Social</td>
+      </tr>
+      <tr>
+        <td width="30%">Local</td><td width="20%">&rarr;</td><td width="30%">Remote</td>
+      </tr>
+      <tr>
+        <td width="30%">Handcrafted</td><td width="20%">&rarr;</td><td width="30%">Industrialized</td>
+      </tr>
+    </table>
+  </section>
+  
+  <section>
+    <h2>2D</h2>
+    <video controls>
+      <source src="movies/haaglanden.mp4" />
+    </video>
+  </section>
+  <section>
+    <h2>1D</h2>
+    <video controls>
+      <source src="movies/duifpolder.webm" />
+    </video>
+  </section>
+  <section>
+    <h2>Model Engine</h2>
+    <ul>
+      <li>Subgrids/Quadtree 2D, SOBEK 1D</li>
+      <li>Overland flow, Groundwater, Infiltration, Evaporation, Interception, Channel flow</li>
+      <li>Weirs, Culverts, Pumps, Orifices</li>
+    </ul>
+  </section>
 
-          <section>
-            <video controls>
-              <source src="movies/haaglanden.mp4" />
-            </video>
-          </section>
-          <section>
-            <video controls>
-              <source src="movies/duifpolder.webm" />
-            </video>
-          </section>
-        </section>
+  <section>
+    <h2>Grid</h2>
+    <img src="images/sfo5_1.png" class="" alt="" />
+  </section>
+  <section>
+    <h2>Models</h2>
+    <ul>
+      <li>Netherlands</li>
+      <li>Singapore</li>
+      <li>South Africa (Kaapstad area)</li>
+      <li>USA (San Francisco Bay)</li>
+    </ul>
+  </section>
 
+</section>
+<section>
+  <section>
+    <table>
+      <tr>
+        <td width="30%">Passive</td><td width="20%">&rarr;</td><td width="30%">Interactive</td>
+      </tr>
+    </table>
+  </section>
+  <section>
+    <h2>Feel the model.</h2>
+    <p><img src="images/interactive.jpg" class="" alt="" /></p>
+  </section>
+  <section>
+    <h2>Old</h2>
+    <p><img src="images/feedback1.png" class="" alt="" /></p>
+  </section>
+  <section>
+    <h2>New</h2>
+    <p><img src="images/feedback2.png" class="" alt="" /></p>
+  </section>
 
-        <section>
-          <section>
-            <table>
-              <tr>
-                <td width="30%">Mono-displinary</td><td width="20%">&rarr;</td><td width="30%">Integrated</td>
-              </tr>
-            </table>
-          </section>
-          <section>
-            \[\begin{aligned}
-	    n_{connections} &amp; \uparrow \mathcal{O}(n^2)
-	    \end{aligned} \]
-          </section> 
-
-          <section>
-            <h2>Hollywood principle</h2>
-            <p><img src="images/audrey.jpg" class="" alt=""/></p>
-          </section>
-          <section>
-            <h2>Introspection</h2>
-            <p><img src="images/inspection2.jpg" class="" alt=""/></p>
-          </section>
-          <section>
-            <div style="float:left">
-              <h3>Hollywood</h3>
-              <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+  <section>
+    <div style="float:left">
+      <h3>Hollywood</h3>
+      <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
 # create a new model
-model = Subgrid()
+model = BMI(engine="subgrid")
 # intialize the model
 model.initalize("input.ini")
 # run a timestep
 model.update(dt)
 # cleanup
 model.finalize()
-              </code></pre>
-            </div>
-            <div>
-              <h3>Introspection</h3>
-              <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+      </code></pre>
+    </div>
+    <div>
+      <h3>Introspection</h3>
+      <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
 # get variables from a running model
 var = model.get_var("waterlevel")
 # set variables into a running model
 model.set_var("waterlevel", array)
-              </code></pre>
-            </div>
-          </section>
-
-          <section>
-            <h3>Files &rarr; memory</h3>
-            <p><img src="images/files.jpg" class="" alt="" style="height:400px;width:400px;"/> <img src="images/memory.jpg" class="" alt="" style="height:400px;width:400px;"/></p>
-          </section>
-          <section>
-            <h3>Clean memory</h3>
-            <p><img src="images/cans1.jpg" class="" alt="" /></p>
-          </section>
-          <section>
-            <h3>Clean memory</h3>
-            <p><img src="images/cans2.jpg" class="" alt=""/></p>
-          </section>
-          <section>
-            <h2>Architecture</h2>
-            <p><img src="images/arch.png" class="" alt="" /></p>
-          </section>
-
-          <section>
-            <h2>Coupling</h2>
-            <p>ESMF</p>
-            <p>OpenMI</p>
-            <p>BMI</p>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <table>
-              <tr>
-                <td width="30%">Solitary</td><td width="20%">&rarr;</td><td width="30%">Social</td>
-              </tr>
-            </table>
-          </section>
-          <section>
-            <p><img src="images/nuclear.jpg" class="" alt="" /></p>
-          </section>
-          <section>
-            <ol>
-              <li>Interesting</li>
-              <li>Relevant</li>
-              <li>Important</li>
-              <li>Essential</li>
-              <li>Existential</li>
-            </ol>
-          </section>
-          <section>
-            <h2>Gezellig</h2>
-            <p><img src="images/gezellig.jpg" class="" alt="" /></p>
-          </section>
-          <section>
-            <p><img src="images/users.png" class="" alt="" /></p>
-          </section>
-          <section>
-            <p><img src="images/ipad.png" class="" alt="" /></p>
-          </section>
-          <section>
-            <p><img src="images/obama1.jpg" class="" alt="" /></p>
-          </section>
-          <section>
-            <p><img src="images/merkel1.jpg" class="" alt="" /></p>
-          </section>
-          <section>
-            <p><img src="images/iran1.jpg" class="" alt="" /></p>
-          </section>
-          <section>
-            <p><img src="images/iran2.jpg" class="" alt="" /></p>
-          </section>
-          <section>
-            <p><img src="images/queen.jpg" class="" alt="" /></p>
-          </section>
-          <section>
-            <p><img src="images/iran3.jpg" class="" alt="" /></p>
-          </section>
-          <section>
-            <p><img src="images/happy.jpg" class="" alt="" /></p>
-          </section>
-
-          <section>
-            \[\begin{aligned}
-	    time_{initialization} &amp; \downarrow 10s \\
-            \\
-	    quality_{visualization} &amp; \uparrow 
-	    \end{aligned} \]
-          </section> 
-
-          <section>
-            <h2>Subgrid model</h2>
-            <p><img src="images/minecraft.png" class="" alt="" /></p>
-          </section>
-
-
-          <section>
-            <video controls>
-              <source src="movies/render.mp4" />
-            </video>
-          </section>
-
-          <section>
-            <h2>Rendering</h2>
-          </section>
-          <section>
-            <img src="images/artifacts_a.png" class="" alt="" />
-            <img src="images/artifacts_b.png" class="" alt="" />
-          </section>
-          <section>
-            <h2>Interpolation</h2>
-            <img src="images/sfo5_1.png" class="" alt="" />
-          </section>
-          <section>
-            <h2>Interpolation</h2>
-            <img src="images/sfo5_2.png" class="" alt="" />
-          </section>
-          <section>
-            <h2>Interpolation</h2>
-            <img src="images/sfo5_3.png" class="" alt="" />
-          </section>
-          <section>
-            <h2>Interpolation</h2>
-            <img src="images/sfo5_4.png" class="" alt="" />
-          </section>
-          <section>
-            <h2>Interpolation</h2>
-            <img src="images/interpolationlevees2.png" class="" alt="" />
-          </section>
-          <section>
-            <h2>Rendering</h2>
-            <img src="images/kleuren.jpg" class="" alt="" />
-          </section>
-          <section>
-            <h2>Maps</h2>
-            <img src="images/map.png" class="" alt="" />
-          </section>
-          <section>
-            <h2>Tiling</h2>
-            <img src="images/tile.png" class="" alt="" />
-          </section>
-          <section>
-            <h2>Rivers</h2>
-            <img src="images/river.png" class="" alt="" />
-          </section>
-          <section>
-            <h2>Layers</h2>
-            <img src="images/layers.png" class="" alt="" />
-          </section>
-        
-        </section>
-        <section>
-          <section>
-            <table>
-              <tr>
-                <td width="30%">Local</td><td width="20%">&rarr;</td><td width="30%">Remote</td>
-              </tr>
-            </table>
-          </section>
-          <section>
-            <h2>Communication</h2>
-            <p><img src="images/communication2.png" class="" alt=""/></p>
-
-          </section>
-          <section>
-            <h2>Communication</h2>
-            <p><img src="images/communication1.png" class="" alt=""/></p>
-
-          </section>
-          <section>
-            <h2>Caching</h2>
-            <p><img src="images/live.png" class="" alt=""/></p>
-          </section>
-          <section>
-            <h2>Caching</h2>
-            <p><img src="images/cache.png" class="" alt=""/></p>
-          </section>
-          <section>
-            <h2>Pushing</h2>
-            <p><img src="images/push.png" class="" alt=""/></p>
-          </section>
-          <section>
-            <p><img src="images/ipad.png" class="" alt="" /></p>
-          </section>
-          <section>
-            \[\begin{aligned}
-	    time_{attention} &amp; \downarrow 1s \\
-	    time_{render} &amp; \downarrow 0.05s \\
-	    time_{computation} &amp; \uparrow \infty \\
-	    \end{aligned} \]
-          </section>
-          <section>
-            <h2>Model Messages Interface</h2>
-            <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-{
- 'shape': [30000,2], 
- 'dtype': 'float64', 
- 'standard_name': 'sea_surface_altitude', 
- 'units': 'm'
-}
-\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3
-            </code></pre>            
-          </section>
-          <section>
-            <h2>Cloud</h2>
-          </section>
-          <section> 
-            <p><img src="images/cloud.png" class="" alt="" /></p>
-          </section>
-          <section>
-            <h2>Amazon</h2>
-            <p><img src="images/clusterstart.png" class="" alt="" /></p>
-          </section>
-          <section>
-              <h2>Amsterdam</h2>
-              <p><img src="images/server1.jpg" class="" alt="" /></p>
-            </section>
-            <section>
-              <h2>Amsterdam</h2>
-              <p><img src="images/server2.jpg" class="" alt="" /></p>
-            </section>
-            <section>
-              <h2>Offline</h2>
-              <ul>
-                <li>Prepare input (Open Gis)</li>
-                <li>Run model (command line)</li>
-                <li>Script model (python scripts)</li>
-                <li>Process output (netcdf)</li>
-              </ul>
-            </section>
-            <section>
-              <video controls>
-                <source src="movies/sfo.mp4" />
-              </video>
-            </section>
-
-
-        </section>        
-        <section>
-          <section>
-            <table>
-              <tr>
-                <td width="30%">Handcrafted</td><td width="20%">&rarr;</td><td width="30%">Industrialized</td>
-              </tr>
-            </table>
-          </section>
-          <section>
-            <h3>Automate everything!</h3>
-            <img src="images/provisioning.png" class="" alt="" />
-          </section>
-          <section>
-            <h2>Preparing models</h2>
-            <img src="images/models.png" class="" alt="" />
-          </section>
-          <section>
-            \[\begin{aligned}
-	    time_{schematize} &amp; \downarrow 8h \\
-	    \end{aligned} \]
-          </section>
-          <section>
-            <h3>Pack and ship</h3>
-            <img src="images/container2.jpg" class="" alt="" />
-          </section>
-          <section>
-            <h3>Model factory</h3>
-            <img src="images/factory1.jpg" class="" alt="" />
-          </section>
-          <section>
-            <h3>Model factory</h3>
-            <img src="images/factory2.jpg" class="" alt="" />
-          </section>
-
-        </section>
-        <section>
-          <section>
-            <h2>Times are changing</h2>
-            \[\begin{aligned}
-	    time_{attention} &amp; \downarrow 1s \\
-	    quality_{visualization} &amp; \uparrow \\
-	    n_{connections} &amp; \uparrow \mathcal{O}(n^2) \\
-
-            \\
-	    time_{initialization} &amp; \downarrow 10s \\
-	    time_{schematize} &amp; \downarrow 8h \\
-	    time_{computation} &amp; \uparrow \infty \\
-	    time_{interaction} &amp; \downarrow 0.1s \\
-	    time_{render} &amp; \downarrow 0.05s \\
-	    \end{aligned} \]
-            
-          </section>
-          <section>
-            <h2>3Di</h2>
-            <p><img src="images/3dilogo.svg" alt="" width="800px"/></p>
-            <p>3di.nu/international</p>
-
-          </section>
-          <section>
-            <h2>Open Source</h2>
-            <p>oss.deltares.nl</p>
-            <p>github.com/openearth</p> 
-            <p>github.com/nens</p>
-            <p>github.com/lizard</p>
-          </section>
-        </section>
-        
-
-
-      </div>
-
+      </code></pre>
     </div>
+  </section>
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>
+  <section>
+    <h3>Files &rarr; memory</h3>
+    <p><img src="images/files.jpg" class="" alt="" style="height:400px;width:400px;"/> <img src="images/memory.jpg" class="" alt="" style="height:400px;width:400px;"/></p>
+  </section>
+  <section>
+    <h3>Clean memory</h3>
+    <p><img src="images/cans1.jpg" class="" alt="" /></p>
+  </section>
+  <section>
+    <h3>Clean memory</h3>
+    <p><img src="images/cans2.jpg" class="" alt=""/></p>
+  </section>
+  <section>
+    <h3>Pump memory</h3>
+    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+# get pump type 
+model.get_var_type("pumps") # -> pump
+# inquire pump type
+model.inq_compound_field("pump", 4) 
+# -> "start_level_suction_side", double, rank=0
+model.get_var("pumps") # -> "dataframe"
+      </code></pre>
+  </section>
 
-    <script>
+</section>
 
-      // Full list of configuration options available here:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-          controls: true,
-          progress: true,
-          history: true,
-          center: true,
+<section>
+  <section>
+    <table>
+      <tr>
+        <td width="30%">Mono-displinary</td><td width="20%">&rarr;</td><td width="30%">Integrated</td>
+      </tr>
+    </table>
+  </section>
 
-          theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-          transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+  <section>
+    <h2>Coupling</h2>
+    <p><img src="images/coupling.svg" alt="" width="800px"/></p>
+  </section>
+  <section>
+    <h2>Architecture</h2>
+    <p><img src="images/arch.png" class="" alt="" /></p>
+  </section>
+</section>
 
-          // Parallax scrolling
-          // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-          // parallaxBackgroundSize: '2100px 900px',
+<section>
+  <section>
+    <table>
+      <tr>
+        <td width="30%">Solitary</td><td width="20%">&rarr;</td><td width="30%">Social</td>
+      </tr>
+    </table>
+  </section>
+  <section>
+    <p><img src="images/nuclear.jpg" class="" alt="" /></p>
+  </section>
+  <section>
+    <ol>
+      <li>Interesting</li>
+      <li>Relevant</li>
+      <li>Important</li>
+      <li>Essential</li>
+      <li>Existential</li>
+    </ol>
+  </section>
+  <section>
+    <h2>Gezellig</h2>
+    <p><img src="images/gezellig.jpg" class="" alt="" /></p>
+  </section>
 
-          // Optional libraries used to extend on reveal.js
-          dependencies: [
-              { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-              { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-              { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-              { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-              { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-              { src: 'plugin/math/math.js', async: true, condition: function() { return !!document.body.classList; } },
-              { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-          ]
-      });
+  <section>
+    <h2>End users</h2>
+    <ul>
+      <li>Local authority</li>
+      <li>Planning sessions</li>
+      <li><del>modellers</del></li>
+    </ul>
+    
+  </section>
+  <section>
+    <div style="float:left">
+      <img src="images/gezellig1.jpg" alt=""  style="width:320px;height:176px" />
+    </div>
+    <div>
+      <img src="images/gezellig2.jpg" alt="" style="width:320px;height:176px" />
+    </div>
+  </section>
+  <section>
+    <p><img src="images/ipad.png" class="" alt="" /></p>
+  </section>
+  <section>
+    <h2>End user: general public</h2>
+    <video controls>
+      <source src="movies/render.mp4" />
+    </video>
+  </section>
 
-    </script>
 
-  </body>
+
+  <section>
+    <h2>Rendering</h2>
+  </section>
+  <section>
+    <h2>Subgrid model</h2>
+    <p><img src="images/minecraft.png" class="" alt="" /></p>
+  </section>
+
+  <section>
+    <img src="images/artifacts_a.png" class="" alt="" />
+    <img src="images/artifacts_b.png" class="" alt="" />
+  </section>
+
+  <section>
+    <h2>Interpolation</h2>
+    <img src="images/sfo5_2.png" class="" alt="" />
+  </section>
+
+  <section>
+    <h2>Interpolation</h2>
+    <img src="images/interpolationlevees2.png" class="" alt="" />
+  </section>
+  <section>
+    <h2>Rendering</h2>
+    <img src="images/kleuren.jpg" class="" alt="" />
+  </section>
+  <section>
+    <h2>Tiling</h2>
+    <img src="images/tile.png" class="" alt="" />
+  </section>
+  <section>
+    <h2>Rivers</h2>
+    <img src="images/river.png" class="" alt="" />
+  </section>
+  
+</section>
+<section>
+  <section>
+    <table>
+      <tr>
+        <td width="30%">Local</td><td width="20%">&rarr;</td><td width="30%">Remote</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Communication</h2>
+    <p><img src="images/communication2.png" class="" alt=""/></p>
+
+  </section>
+  <section>
+    <h2>Communication</h2>
+    <p><img src="images/communication1.png" class="" alt=""/></p>
+
+  </section>
+  <section>
+    <h2>Caching</h2>
+    <p><img src="images/live.png" class="" alt=""/></p>
+  </section>
+  <section>
+    <h2>Pushing</h2>
+    <p><img src="images/push.png" class="" alt=""/></p>
+  </section>
+  <section>
+    <h2>Model Messages Interface</h2>
+    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+        {
+        'shape': [30000,2], 
+        'dtype': 'float64', 
+        'standard_name': 'sea_surface_altitude', 
+        'units': 'm'
+        }
+        \x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3
+    </code></pre>            
+  </section>
+  <section>
+    <h2>Cloud</h2>
+  </section>
+  <section>
+    <h2>Amsterdam</h2>
+    <p><img src="images/server2.jpg" class="" alt="" /></p>
+  </section>
+  <section>
+    <h2>Amazon</h2>
+    <p><img src="images/clusterstart.png" class="" alt="" /></p>
+  </section>
+
+
+</section>        
+<section>
+  <section>
+    <table>
+      <tr>
+        <td width="30%">Handcrafted</td><td width="20%">&rarr;</td><td width="30%">Industrialized</td>
+      </tr>
+    </table>
+  </section>
+  <section>
+    <h3>Automate everything!</h3>
+    <img src="images/provisioning.png" class="" alt="" />
+  </section>
+  <section>
+    <h2>Preparing models</h2>
+    <img src="images/models.png" class="" alt="" />
+  </section>
+  <section>
+    <h3>Pack and ship</h3>
+    <img src="images/container2.jpg" class="" alt="" />
+  </section>
+  <section>
+    <h3>Model factory</h3>
+    <img src="images/factory1.jpg" class="" alt="" />
+  </section>
+  <section>
+    <h3>Model factory</h3>
+    <img src="images/factory2.jpg" class="" alt="" />
+  </section>
+
+  <section>
+    <h2>Scriptability</h2>
+    <video controls>
+      <source src="movies/sfo.mp4" />
+    </video>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Open Source</h2>
+    <p>oss.deltares.nl</p>
+    <p>github.com/openearth</p> 
+    <p>github.com/nens</p>
+    <p>github.com/lizard</p>
+  </section>
+</section>
+
+
+
+</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+      // Parallax scrolling
+      // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+      // parallaxBackgroundSize: '2100px 900px',
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/math/math.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+
+</script>
+
+</body>
 </htmh2>
