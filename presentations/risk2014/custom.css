@@ -1,3 +1,5 @@
 .reveal section img {
     border:none;
+    max-height: 500px;
 }
+

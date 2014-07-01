@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="383px" height="223px" version="1.1">
+  <defs/>
+  <g transform="translate(0.5,0.5)">
+    <rect x="131" y="161" width="120" height="60" rx="9" ry="9" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+    <rect x="133" y="163" width="116" height="56" rx="8" ry="8" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+    <g transform="translate(133,184)">
+      <switch>
+        <foreignObject pointer-events="all" width="116" height="15" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.26; vertical-align: top; width: 116px; white-space: normal; text-align: center;">MODEL</div>
+        </foreignObject>
+        <text x="58" y="14" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+      </switch>
+    </g>
+    <rect x="131" y="81" width="120" height="60" rx="9" ry="9" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+    <rect x="133" y="83" width="116" height="56" rx="8" ry="8" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+    <g transform="translate(133,96)">
+      <switch>
+        <foreignObject pointer-events="all" width="116" height="30" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.26; vertical-align: top; width: 116px; white-space: normal; text-align: center;">BMI<br />Library Interface</div>
+        </foreignObject>
+        <text x="58" y="21" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+      </switch>
+    </g>
+    <rect x="1" y="1" width="120" height="60" rx="9" ry="9" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+    <rect x="3" y="3" width="116" height="56" rx="8" ry="8" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+    <g transform="translate(3,9)">
+      <switch>
+        <foreignObject pointer-events="all" width="116" height="45" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.26; vertical-align: top; width: 116px; white-space: normal; text-align: center;">OpenMI<br />OO Interface<br />Windows</div>
+        </foreignObject>
+        <text x="58" y="29" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+      </switch>
+    </g>
+    <rect x="131" y="1" width="120" height="60" rx="9" ry="9" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+    <rect x="133" y="3" width="116" height="56" rx="8" ry="8" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+    <g transform="translate(133,9)">
+      <switch>
+        <foreignObject pointer-events="all" width="116" height="45" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.26; vertical-align: top; width: 116px; white-space: normal; text-align: center;">ESMF<br />OO Interface<br />HPC</div>
+        </foreignObject>
+        <text x="58" y="29" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+      </switch>
+    </g>
+    <rect x="261" y="1" width="120" height="60" rx="9" ry="9" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+    <rect x="263" y="3" width="116" height="56" rx="8" ry="8" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+    <g transform="translate(263,9)">
+      <switch>
+        <foreignObject pointer-events="all" width="116" height="45" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.26; vertical-align: top; width: 116px; white-space: normal; text-align: center;">MMI<br />Message Interface<br />Web</div>
+        </foreignObject>
+        <text x="58" y="29" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]</text>
+      </switch>
+    </g>
+    <path d="M 61 61 Q 61 61 136 79" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+    <path d="M 141 81 L 134 82 L 136 79 L 135 76 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+    <path d="M 191 61 Q 191 61 191 75" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+    <path d="M 191 80 L 188 73 L 191 75 L 195 73 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+    <path d="M 321 61 Q 321 61 246 79" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+    <path d="M 241 81 L 247 76 L 246 79 L 248 82 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+    <path d="M 191 141 Q 191 141 191 155" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+    <path d="M 191 160 L 188 153 L 191 155 L 195 153 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+  </g>
+</svg>

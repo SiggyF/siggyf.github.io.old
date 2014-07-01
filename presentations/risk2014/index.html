@@ -6,8 +6,8 @@
 
     <title>OpenEarth</title>
 
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="">
+    <meta name="author" content="Fedor Baart">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -24,10 +24,10 @@
     <!-- Overwrites -->
     <link rel="stylesheet" href="custom.css">
 
-    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
-    <script>
-      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-    </script>
+    <!-- <\!-- If the query includes 'print-pdf', use the PDF print sheet -\-> -->
+    <!-- <script> -->
+    <!--   document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' ); -->
+    <!-- </script> -->
 
     <!--[if lt IE 9]>
 	<script src="lib/js/html5shiv.js"></script>
@@ -48,38 +48,12 @@
             <h1>OpenEarth</h1>
             <p>Fedor Baart</p>
             <p><a href="fedor.baart@deltares.nl">fedor.baart@deltares.nl</a></p>
+            <p><a href="f.baart@tudelft.nl">f.baart@tudelft.nl</a></p>
             <p><img src="figures/logo.png" alt="" /></p>
             
           </section>
         </section>
 
-        <section>
-          <section>
-            <h1>Data</h1>
-          </section>
-          <section>
-            <img src="figures/jamin.jpg" alt="" />
-          </section>
-          <section>
-            <img src="figures/wolf.jpg" alt="" />
-          </section>
-          <section>
-            <img src="figures/ftp.png" alt="" />
-          </section>
-          <section>
-            <img src="figures/form.png" alt="" />
-          </section>
-          <section>
-            <img src="figures/datatube.png" alt="" />
-          </section>
-          <section>
-            <img src="figures/adaguc.png" alt="" />
-          </section>
-          <section>
-            <a href="http://dtvirt5.deltares.nl/static/video.html">datatube</a>
-          </section>
-
-        </section>
 
 
         <section>
@@ -121,6 +95,10 @@
             <h2>3TU</h2>
             <img src="figures/3tu.png" alt="" />
           </section>
+          <section>
+            <h2>Deltares</h2>
+            <img src="figures/oetsite.png" alt="" />
+          </section>
         </section>
 
         
@@ -143,7 +121,34 @@
         
         <section>
           <section>
-            <h2>Raw</h2>
+            <h1>Data</h1>
+          </section>
+          <section>
+            <img src="figures/jamin.jpg" alt="" />
+          </section>
+          <section>
+            <img src="figures/wolf.jpg" alt="" />
+          </section>
+          <section>
+            <img src="figures/ftp.png" alt="" />
+          </section>
+          <section>
+            <img src="figures/form.png" alt="" />
+          </section>
+          <section>
+            <img src="figures/datatube.png" alt="" />
+          </section>
+          <section>
+            <img src="figures/adaguc.png" alt="" />
+          </section>
+          <section>
+            <a href="http://dtvirt5.deltares.nl/static/video.html">datatube</a>
+          </section>
+
+        </section>
+        <section>
+          <section>
+            <h2>Raw data</h2>
           </section>
 
           <section>
@@ -159,7 +164,6 @@
           <section>
             <img src="figures/combinedfigures.png" alt="" />
           </section>
-
 
           <section>
             <img src="figures/peanutbutter1.jpg" alt="" />
@@ -180,6 +184,444 @@
         </section>
 
 
+
+        <section>
+          <section>
+            <h1>Model coupling</h1>
+            <ul>
+              <li>Offline</li>
+              <li>Online</li>
+              <li>Interactive</li>
+              <li>Model as a Service</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Offline model coupling</h2>
+            <img src="figures/fews.png"  alt="" />
+            <p>FEWS</p>
+          </section>
+          <section>
+            <h2>FEWS</h2>
+      <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews
+E:\schemas\workflow.xsd">
+    <activity>
+        <runIndependent>false</runIndependent>
+        <moduleInstanceId>Astronomical</moduleInstanceId>
+    </activity>
+    <!--  ... -->
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>GridToCatchments_Forecast</moduleInstanceId>
+    </activity>
+    <activity>
+        <runIndependent>true</runIndependent>
+        <moduleInstanceId>Singapore_Sobek_Forecast</moduleInstanceId>
+    </activity>
+</workflow>
+      </code></pre>
+            
+          </section>
+          <section>
+            <h2>Online model coupling</h2>
+            <p>Two way, dynamic, integrated, data exchange at timestep level, memory based.</p>
+          </section>
+          <section>
+            <h2>Model coupling frameworks</h2>
+          </section>
+          <section>
+            <h2>Variations:</h2>
+            <ul>
+              <li>Framework</li>
+              <li>Tools</li>
+              <li>API</li>
+              <li>Supported languages</li>
+              <li>Invasiviness</li>
+              <li>HPC support</li>
+              <li>Coupling pattern</li>
+              <li>Configuration GUI/Code/Files</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Common API</h2>
+            <ol>
+              <li>Initialize</li>
+              <li>Run</li>
+              <li>Finalize</li>
+            </ol>
+          </section>
+          <section>
+            <h2>OpenMI</h2>
+            <ul>
+              <li>Framework: takes over timeloop</li>
+              <li>Tools: no separate tools </li>
+              <li>C#/Java</li>
+              <li>Invasive</li>
+              <li>Local</li>
+              <li>Publish/Subscribe</li>
+              <li>XML configuration</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Goal: Windows based/configurable coupling</h2>
+            <img src="figures/openmi.png">
+          </section>
+          <section>
+            <pre><code data-trim>
+// --- Populate input exchange item for flow into the whole river ---
+EngineInputItem wholeRiverFlowInputItem = CreateInputInflowToRiver(flowQuantity, fullRiverElementSet);
+wholeRiverFlowInputItem.TimeSet.SetTimeHorizon(timeHorizon);
+EngineInputItems.Add(wholeRiverFlowInputItem);
+
+// --- Populate input exchange item for ground water level of the whole river ---
+EngineDInputItem gwLevelInputItem = CreateInputGwLevel(levelQuantity, fullRiverElementSet);
+gwLevelInputItem.TimeSet.SetTimeHorizon(timeHorizon);
+EngineInputItems.Add(gwLevelInputItem);
+
+// --- Populate output exchange items for flow in river branches, id based ---
+for (int i = 0; i < _numberOfNodes - 1; i++)
+{
+  string id = "Branch:" + i;
+  ElementSet elementSet = new ElementSet(id, id, ElementType.IdBased);
+  elementSet.AddElement(new Element(id));
+
+  EngineOutputItem outputExchangeItem = CreateOutputFlowInBranch(i, id, flowQuantity, elementSet);
+  EngineOutputItems.Add(outputExchangeItem);
+}
+
+            </code></pre>
+
+          </section>
+          <section>
+            <h2>OGC standardization</h2>
+          </section>
+          <section>
+            <h2>Implemented in</h2>
+            <ul>
+              <li>SWAN</li>
+              <li>SOBEK</li>
+              <li>Delft3D</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Goal: unstructured/structured on cluster</h2>
+            <img src="figures/ugrid.png" style="filter:dropshadow();">
+          </section>
+
+
+          <section>
+            <h2>ESMF</h2>
+            <ul>
+              <li>Framework: takes over timeloop and interpolation</li>
+              <li>Tools: command line tool for regridding, supports UGRID </li>
+              <li>C/Fortran</li>
+              <li>1 fortran module per model</li>
+              <li>MPI</li>
+              <li>Push</li>
+              <li>Code configuration</li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h2>SWAN Component</h2>
+            <pre>
+              <code data-trim>
+call ESMF_ClockGet(clock, currSimTime=timeinterval, rc=rc)
+call ESMF_TimeIntervalGet(timeinterval, s_r8=esmft, rc=rc)
+
+! Get the timestep from esmf, the coupled timestep
+call ESMF_ClockGet(clock, timestep=timeinterval, rc=rc)
+call ESMF_TimeIntervalGet(timeinterval, s_r8=esmfstep, rc=rc)
+
+
+! Run until we reach esmfnext
+esmfnext = (esmft+esmfstep)
+
+! Assume swan runs all the way up to esmfnext....
+call update(esmfstep)
+
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>Configuration in code</h2>
+            <pre>
+              <code data-trim>
+swancomp = ESMF_GridCompCreate(name="swan model", rc=rc)
+dflowfmcomp = ESMF_GridCompCreate(name="dflowfm model", rc=rc)
+swanfmcpl = ESMF_CplCompCreate(name="swan-fm coupler", rc=rc)
+
+swanimp = ESMF_StateCreate(name="swan import", stateintent=ESMF_STATEINTENT_IMPORT, rc=rc)
+swanexp = ESMF_StateCreate(name="swan export", stateintent=ESMF_STATEINTENT_EXPORT, rc=rc)
+dflowfmimp = ESMF_StateCreate(name="dflowfm import", stateintent=ESMF_STATEINTENT_IMPORT, rc=rc)
+dflowfmexp = ESMF_StateCreate(name="dflowfm export", stateintent=ESMF_STATEINTENT_EXPORT, rc=rc)
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Regridding</h2>
+            <pre><code data-trim >
+if (trim(name) .eq. 'dflowfm export') then
+  call ESMF_FieldRegridStore(fromfield, tofield, &
+      unmappedaction=ESMF_UNMAPPEDACTION_IGNORE, &
+      routehandle=fromfm_rh, rc=rc)
+else if(trim(name) .eq. 'swan export') then
+  call ESMF_FieldRegridStore(fromfield, tofield, &
+      unmappedaction=ESMF_UNMAPPEDACTION_IGNORE, &
+      routehandle=fromswan_rh, weights=weights, indices=indices,  rc=rc)
+end if
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Implemented in</h2>
+            <ul>
+              <li>XBeach</li>
+              <li>Dune</li>
+              <li>SWAN</li>
+              <li>DFlowFM</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Goal: interactive modelling</h2>
+            <img src="figures/interactive.png">
+          </section>
+        <section>
+          <h2>Basic Model Interface (BMI)</h2>
+          <ul>
+            <li>No framework, interface only</li>
+            <li>No tools </li>
+            <li>No coupling</li>
+            <li>C interface</li>
+            <li>Not very invasive</li>
+            <li>Library level</li>
+            <li>Getter/Setter</li>
+          </ul>
+        </section>
+
+
+  <section>
+    <div style="float:left">
+      <h3>Hollywood</h3>
+      <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+# create a new model
+model = BMI(engine="subgrid")
+# intialize the model
+model.initalize("input.ini")
+# run a timestep
+model.update(dt)
+# cleanup
+model.finalize()
+      </code></pre>
+    </div>
+    <div>
+      <h3>Introspection</h3>
+      <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+# get variables from a running model
+var = model.get_var("waterlevel")
+# set variables into a running model
+model.set_var("waterlevel", array)
+      </code></pre>
+    </div>
+  </section>
+
+
+
+        <section>
+          <h2>3Di</h2>
+          <pre>
+            <code data-trim>
+with BMIWrapper(engine="subgrid", config="1dpumps") as subgrid:
+    while True:
+        df = subgrid.get_nd('pumps')
+        rc.publish(channel, type="pumps", msg=df.to_json())
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <a href="http://live.3di.lizard.net">3Di</a>
+        </section>
+
+        <section>
+          <h2>Implemented in</h2>
+          <ul>
+            <li>XBeach</li>
+            <li>SWAN</li>
+            <li>DFlowFM</li>
+            <li>Subgrid</li>
+            <li>Delta Shell</li>
+          </ul>
+        </section>
+
+
+        <section>
+          <h2>Online coupling examples</h2>
+          <ol>
+            <li>Library interface: BMI</li>
+            <li>Java/C#: OpenMI</li>
+            <li>Parallel coupling: ESMF</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Coupling of coupling frameworks</h2>
+          <p><img src="figures/coupling.svg" alt="" /></p>
+        </section>
+          <section><h2>Main difficulties in coupling</h2></section>
+          <section>
+            <h2>Not invented here</h2>
+            <img src="figures/baby.jpg" />
+          </section>
+          <section>
+            <h2>Languages</h2>
+            <img src="figures/babel.jpg" />
+          </section>
+          <section>
+            <h2>Hollywood principle</h2>
+            <img src="figures/audrey.jpg" />
+          </section>
+
+        </section>
+        <section>
+        <section>
+          <h2>Model as a service</h2>
+          <ul>
+            <li>NetCDF memory</li>
+            <li>Web Processing Services</li>
+            <li>Model Message Interface</li>
+          </ul>
+        </section>
+
+          <section>
+            <h2>Goal: transparent opendap coupling</h2>
+            <img src="figures/lizard.png">
+          </section>
+
+
+          <section>
+            <h2>NetCDF shared memory</h2>
+            <ul>
+              <li>No framework</li>
+              <li>NetCDF library</li>
+              <li>C/Fortran/Python</li>
+              <li>Not invasive, 1 flag</li>
+              <li>Shared memory</li>
+              <li>Code</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Shared memory</h2>
+            <p><a href="https://github.com/SiggyF/netcdf-c">shared memory extension</a></p>
+<pre><code data-trim>
+lib = ctypes.CDLL("libmodel.so")
+lib.initialize()
+ds = netCDF4.Dataset("diskless.nc",
+                     diskless=True,
+                     persist=False)
+ds.createVariable("rain", datatype="double", dimensions=("angle", "distance"))
+            </code></pre>
+
+<pre><code data-trim>
+ierr = nf90_open("diskless.nc", mode=NF90_DISKLESS, ncid=ncid)
+ierr = nf90_get_var(ncid, 1, data)
+</code></pre>
+          </section>
+          <section>
+            <h2>Goal: expose models as a webservice</h2>
+            <p><img src="figures/tide.png" width="600" height="400"></p>
+          </section>
+          <section>
+            <h2>Web Processing Service</h2>
+            <pre>
+              <code data-trim>
+http://dtvirt5.deltares.nl/wps?
+    request=Execute&
+    identifier=tidal_predict&
+    service=wps&
+    version=1.0.0&
+    datainputs=location=LINESTRING(2%2052,3%2053);startdate=2020-01-01;enddate=2020-01-02&
+    responsedocument=tide=@mimetype=text/csv
+              </code>
+            </pre>
+          </section>
+
+          <section>
+            <h2>WPS response</h2>
+            <p><img src="figures/xml2.png"></p>
+          </section>
+          <section>
+            <pre>
+              <code data-trim>
+class Process(WPSProcess):
+    def __init__(self):
+        WPSProcess.__init__(self,
+            identifier = "tidal_predict",
+            title="Tidal prediction tool")
+        self.addComplexInput(identifier = "location",
+                             title = "Input vector (point, linestring) in format geojson, well known text or gml",
+                             formats = [
+                                 {'mimeType': 'text/plain', 'encoding': 'UTF-8'},
+                                 {'mimeType': 'application/xml', 'schema': 'http://schemas.opengis.net/gml/2.1.2/feature.xsd', 'encoding': 'UTF-8'},
+                                 {'mimeType': 'application/json'}
+                             ])
+...
+        self.addComplexOutput(identifier = "tide",
+                              title = "Calculated water level for requested locations and date",
+                              formats = [
+                                  {"mimeType": "text/csv"},
+                                  {"mimeType": "application/json"}
+                              ])
+              </code>
+            </pre>
+          </section>
+          <section>
+            <pre>
+              <code data-trim>
+# Execution part of the process
+def execute(self):
+    startdate = dateutil.parser.parse(self.startdate.getValue())
+    enddate = dateutil.parser.parse(self.enddate.getValue())
+    freq = self.frequency.getValue()
+    dates = dateutil.rrule.rrule(rrules_freqs[freq], dtstart=startdate, until=enddate)[:]
+    location = self.location.getValue()
+    geom = pywps.utils.decode(location)
+    points = np.atleast_2d(np.asarray(geom))
+    df = openearthtools.tide.predict(points, dates=dates)
+    self.setValue(df.to_json(f, orient='records'))
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Goal: Push model results to a browser</h2>
+            <p><img src="figures/push.png" class="" alt=""/></p>
+          </section>
+  <section>
+    <h2>Model Messages Interface</h2>
+    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+{
+  'shape': [30000,2], 
+  'dtype': 'float64', 
+  'standard_name': 'sea_surface_altitude', 
+  'units': 'm'
+}
+\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3\x03\x02\x06\xb3
+    </code></pre>            
+  </section>
+
+  <section>
+    <ol>
+      <li>Model browser interactivity: Model Message Interface</li>
+      <li>Models as a Service: WPS</li>
+    </ol>
+  </section>
+
+
+        </section>
         
         <section>
           <section>
@@ -225,14 +667,6 @@
             <h2>Subversions + Github</h2>
             <ul>
               <li>Tools: 11000 commits </li>
-            </ul>
-          </section>
-          <section>
-            <h2>Servers</h2>
-            <ul>
-              <li>WPS</li>
-              <li>Viewers</li>
-              <li>Interactive models</li>
             </ul>
           </section>
         </section>
