@@ -89,7 +89,16 @@
           <section>
             <h1>History</h1>
           </section>
-          
+
+          <section>
+            <h2>Open Source GIS</h2>
+            <p>1980 Lagrid @ Westervelt</p>
+            <p>1983 Proj4 @ Evenden</p>
+            <p>1983 GRASS GIS @ CERL</p>
+            <p>1994 www</p>
+            <p>1994 Open Geospatial Consortium</p>
+          </section>
+
           <section>
             <h2>First map</h2>
             <p><img src="figures/xerox.jpg" alt="" /></p>
@@ -102,6 +111,23 @@
             <p>1994 @ NASA/ForNet (open source since 1999)</p>
           </section>
 
+
+          <section>
+            <h2>First process</h2>
+            <p><img src="figures/grasslinks.png" alt="" /></p>
+            <p>1995 @ Berkely</p>
+          </section>
+          
+          <section>
+            <h2>Location based services: routing</h2>
+            <p>1996 @ Mapquest & Multimap </p>
+          </section>
+          <section>
+            <h2>Spatial querying</h2>
+            <p>2000 @ Geoserver</p>
+          </section>
+          
+
           <section>
             <h2>NASA World Wind</h2>
             <p>2003 @ NASA</p>
@@ -110,6 +136,11 @@
           <section>
             <h2>OpenStreetMap</h2>
             <p>2004 @ Steve Coast</p>
+          </section>
+
+          <section>
+            <h2>Styling</h2>
+            <p>2005 @ Mapnik</p>
           </section>
 
           <section>
@@ -128,44 +159,17 @@
           </section>
 
           <section>
-            <h2>Vectors and 3D</h2>
-            <p>2011 @ W3</p>
-          </section>
-
-          <section>
-            <h2>First process</h2>
-            <p><img src="figures/grasslinks.png" alt="" /></p>
-            <p>1995 @ Berkely</p>
-          </section>
-          
-          <section>
-            <h2>Location based services: routing</h2>
-            <p>1996 @ Mapquest & Multimap </p>
-          </section>
-          <section>
-            <h2>Spatial querying</h2>
-            <p>2000 @ Geoserver</p>
-          </section>
-          
-          <section>
-            <h2>Styling</h2>
-            <p>2005 @ Mapnik</p>
-          </section>
-
-
-          <section>
-            <h2>Stylesheets</h2>
-            <p>2008 @ Mapnik & Tilemill</p>
-          </section>
-
-          <section>
             <h2>Sensors</h2>
             <p>2007 @ OGC</p>
           </section>
 
           <section>
-            <h2>Map Content Management</h2>
-            <p>2011 @ CartoDB</p>
+            <h2>INSPIRE</h2>
+            <p>2007 @ EU</p>
+          </section>
+          <section>
+            <h2>Stylesheets</h2>
+            <p>2008 @ Mapnik & Tilemill</p>
           </section>
 
           <section>
@@ -177,6 +181,17 @@
             <h2>Earth Engine</h2>
             <p>2010 @ Google</p>
           </section>
+
+          <section>
+            <h2>Vectors and 3D</h2>
+            <p>2011 @ W3</p>
+          </section>
+
+          <section>
+            <h2>Map Content Management</h2>
+            <p>2011 @ CartoDB</p>
+          </section>
+
           <section>
             <h2>Interactive models</h2>
             <p>2014 @ 3Di</p>
@@ -350,9 +365,9 @@
             <h2>Other services</h2>
             <ul>
               <li>Sensor Observation Service</li>
-              <li>Web Coverage Processing Service</li>
               <li>Open Model Interface</li>
               <li>Catalogue Service for the Web</li>
+              <li>OPeNDAP</li>
             </ul>
           </section>
           <section>
@@ -390,7 +405,116 @@
             </ul>
           </section>
           <section>
-            <h2>Implementations</h2>
+            <h2>Typical examples</h2>
+            <ul>
+              <li>Spatial operations</li>
+              <li>Conversions</li>
+              <li>Process @ data</li>
+              <li>Simple models</li>
+              <li>Facade to complex models</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Operations</h2>
+            <ul>
+              <li>GetCapabilities</li>
+              <li>DescribeProcess</li>
+              <li>Execute</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Tide Example</h2>
+          </section>
+          <section>
+            <h2>GetCapabilities</h2>
+<pre>
+  <code><wps:Capabilities service="WPS" version="1.0.0">
+  <ows:ServiceIdentification>
+    <ows:Title>OpenEarth WPS server</ows:Title>
+    <ows:AccessConstraints>none</ows:AccessConstraints>
+  </ows:ServiceIdentification>
+  <ows:ServiceProvider>
+    <ows:ProviderName>Deltares</ows:ProviderName>
+  </ows:ServiceProvider>
+  <wps:ProcessOfferings>
+    <wps:Process wps:processVersion="0.1">
+      <ows:Identifier>tidal_predict</ows:Identifier>
+      <ows:Title>Tidal prediction tool</ows:Title>
+    </wps:Process>
+  </wps:ProcessOfferings>
+</wps:Capabilities>
+</code>
+</pre>
+          </section>
+          <section>
+            <h2>DescribeProcess</h2>
+<pre>
+  <code><wps:ProcessDescriptions service="WPS" version="1.0.0" xml:lang="en-CA">
+  <ProcessDescription >
+    <ows:Identifier>tidal_predict</ows:Identifier>
+    <ows:Title>Tidal prediction tool</ows:Title>
+    <DataInputs>
+      ...<Identifier>startdate</Identifier>...
+    </DataInputs>
+    <ProcessOutputs>
+      <Output>
+        <ows:Identifier>tide</ows:Identifier>
+        <ows:Title>Calculated water level for requested locations and date</ows:Title>
+        <ComplexOutput>
+          ...<MimeType>text/csv</MimeType>...
+        </ComplexOutput>
+      </Output>
+    </ProcessOutputs>
+  </ProcessDescription>
+</wps:ProcessDescriptions></code>
+</pre>
+</section>
+
+
+          <section>
+            <h2>Input/Output</h2>
+            <ul>
+              <li>Title/Abstract</li>
+
+              <li>Description</li>
+              <li>Unit</li>
+              <li>Default</li>
+              <li>Min/max occurance</li>
+            </ul>
+            <h2>Types</h2>
+            <ul>
+              <li>Literal (string, number)</li>
+              <li>Bounding Box</li>
+              <li>Complex (raster, vector)</li>
+            </ul>
+          </section>
+
+          <section>
+<h2>Execute</h2>
+
+<pre>
+  <code><wps:ExecuteResponse>
+<wps:Process wps:processVersion="0.1">
+  <ows:Identifier>tidal_predict</ows:Identifier>
+  <wps:Status creationTime="2014-11-02T19:50:39Z">
+    <wps:ProcessSucceeded>PyWPS Process tidal_predict successfully calculated</wps:ProcessSucceeded>
+  </wps:Status>
+  <wps:ProcessOutputs>
+    <wps:Output>
+      <ows:Title>Calculated water level for requested locations and date</ows:Title>
+      <wps:Data>
+        <wps:ComplexData mimeType="text/csv">
+date,h,lat,lon
+2014-11-02 19:50:37,0.3735264572229592,3.0,52.0
+        </wps:ComplexData>
+      </wps:Data>
+    </wps:Output>
+  </wps:ProcessOutputs>
+</wps:ExecuteResponse></code>
+</pre>
+          </section>
+          <section>
+            <h2>Server Implementations</h2>
             <ul>
               <li>Zoo</li>
               <li>PyWPS</li>
@@ -399,7 +523,14 @@
             </ul>
           </section>
           <section>
-            <h2>Tide Example</h2>
+            <h2>Tools and languages</h2>
+            <ul>
+              <li>JTS</li>
+              <li>GRASS</li>
+              <li>Orfeo</li>
+              <li>Sextante</li>
+              <li>python, R, java</li>
+            </ul>
           </section>
           <section>
             <h2>Implementing a process</h2>
@@ -417,31 +548,77 @@ class Process(WPSProcess):
   </code></pre>
           </section>
           <section>
+            <h2>Client Implementations</h2> 
+            <ul>
+              <li>OpenLayers</li>
+              <li>OWSLib</li>
+              <li>Geotools (unsupported)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Client Example</h2>
+<pre>
+  <code>// OpenLayers example
+client = new OpenLayers.WPSClient({
+  servers: {
+    opengeo: 'http://demo.opengeo.org/geoserver/wps'
+  }
+});
+    
+intersect = client.getProcess('opengeo', 'JTS:intersection');    
+intersect.configure({
+  inputs: {
+    a: features,
+    b: geometry
+  },
+  success: function(outputs) {
+    map.baseLayer.addFeatures(outputs.result);
+  }
+});
+</code>
+</pre>
+</section>
+          <section>
+            <h2>Setting up a server</h2>
+            <ol>
+              <li>Get OSX/linux computer with VirtualBox</li>
+              <li>Install ansible</li>
+              <li>Install vagrant</li>
+              <li>Download OpenEarth stack @ github</li>
+              <li>$ vagrant up wps</li>
+            </ol>
+          </section>
+          <section>
             <h2>Missing features</h2>
             <ul>
-              <li>Stop a process (2.0)</li>
-              <li>Constrain spatial types as input</li>
-              <li>REST (2.0)</li>
-              <li>Layout hints</li>
-              <li>Push</li>
+              <li>Stop a process</li>
+              <li>REST</li>
+              <li>Spatial types (everything is complex)</li>
+              <li>Layout hints/classes</li>
+              <li>Variable relations</li>
+              <li>Push/notifications</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Planned in WPS 2</h2>
+            <p>Fall of 2014?</p>
+            <ul>
+              <li>Pause,Resume,Dismiss</li>
+              <li>REST?</li>
             </ul>
           </section>
         </section>
+        
+        <section>
         <section>
           <h1>Excercises</h1>
         </section>
         <section>
-          <h1>Optional excercises</h1>
-          
+          <h1>WMS + WFS</h1>
+          <p><a href="http://nbviewer.ipython.org/github/openearth/notebooks/blob/master/ahn2.ipynb">wfs/wms client</a></p>
+          <h1>WPS</h1>
+          <p><a href="http://nbviewer.ipython.org/github/openearth/notebooks/blob/master/wpsclient.ipynb">wps client</a></p>
         </section>
-        <section>
-          <h2>OWSLib</h2>
-        </section>
-        <section>
-          <h2>Sensor</h2>
-        </section>
-        <section>
-          <h2>Tide</h2>
         </section>
         <section>
           <h1><i class="fa fa-glass"></i></h1>
