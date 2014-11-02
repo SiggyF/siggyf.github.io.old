@@ -1,0 +1,22 @@
+.reveal section img {
+    border:none;
+    max-width: 70%;
+    max-height: 70%;
+
+}
+.reveal .fa {
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.date tr td:nth-child(1) { /* Align first column right */
+   text-align: right;
+}
+
+.date tr td:nth-child(2) { /* Align first column right */
+   padding-left: 20px;
+}
+.reveal section table {
+    margin-top: 50px;
+    min-width: 60%;
+}

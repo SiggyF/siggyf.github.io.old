@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>OpenEarth</title>
+
+    <meta name="description" content="OpenEarth stack">
+    <meta name="author" content="Fedor Baart">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/theme/simple.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+    <!-- Overwrites -->
+    <link rel="stylesheet" href="custom.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="bower_components/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+	<!-- PUT SLIDES HERE -->
+        <section>
+          <section>
+            <h1>OpenGIS Services</h1>
+            <p>@ Delft Software Days 2014</p>
+          </section>
+          <section>
+            <p>Fedor Baart</p>
+            <p><a href="fedor.baart@deltares.nl">fedor.baart@deltares.nl</a></p>
+            <p><img src="figures/logo.png" alt="" /></p>
+          </section>
+          <section>
+            <h2>Agenda</h2>
+            <table class="date">
+              <tr>
+                <td>09:00 - 09:15</td><td>Introduction, Fedor Baart</td>
+              </tr>
+              <tr>
+                <td>09:15 - 10:30</td><td>PostGIS and Qgis, Frank Keppel </td>
+              </tr>
+              <tr>
+                <td>10:30 - 11:00</td><td><i class="fa fa-coffee"></i></td>
+              </tr>
+              <tr>
+                <td>11:00 - 12:30</td><td>Gridded data, Giorgio Santinelli</td>
+              </tr>
+              <tr>
+                <td>12:30 - 14:00</td><td><i class="fa fa-cutlery"></i></td>
+              </tr>
+              <tr>
+                <td>14:00 - 15:30</td><td>Visualizing with KML, Kees den Heijer</td>
+              </tr>
+              <tr>
+                <td>15:30 - 16:00</td><td><i class="fa fa-coffee"></i></td>
+              </tr>
+              <tr>
+                <td>16:00 - 17:30</td><td>Services, Fedor Baart</td>
+              </tr>
+              <tr>
+                <td>17:30 - 18:30</td><td><i class="fa fa-glass"></i></td>
+              </tr>
+            </table>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>History</h1>
+          </section>
+          
+          <section>
+            <h2>First map</h2>
+            <p><img src="figures/xerox.jpg" alt="" /></p>
+            <p>1993 @ Xerox</p>
+          </section>
+
+          <section>
+            <h2>Mapserver</h2>
+            <img src="" alt="" />
+            <p>1994 @ NASA/ForNet (open source since 1999)</p>
+          </section>
+
+          <section>
+            <h2>NASA World Wind</h2>
+            <p>2003 @ NASA</p>
+          </section>
+
+          <section>
+            <h2>OpenStreetMap</h2>
+            <p>2004 @ Steve Coast</p>
+          </section>
+
+          <section>
+            <h2>Google Maps</h2>
+            <p>2005 @ Google</p>
+          </section>
+
+          <section>
+            <h2>Tilecache</h2>
+            <p>2006 @ Metacarta</p>
+          </section>
+
+          <section>
+            <h2>Streetview</h2>
+            <p>2007 @ Google</p>
+          </section>
+
+          <section>
+            <h2>Vectors and 3D</h2>
+            <p>2011 @ W3</p>
+          </section>
+
+          <section>
+            <h2>First process</h2>
+            <p><img src="figures/grasslinks.png" alt="" /></p>
+            <p>1995 @ Berkely</p>
+          </section>
+          
+          <section>
+            <h2>Location based services: routing</h2>
+            <p>1996 @ Mapquest & Multimap </p>
+          </section>
+          <section>
+            <h2>Spatial querying</h2>
+            <p>2000 @ Geoserver</p>
+          </section>
+          
+          <section>
+            <h2>Styling</h2>
+            <p>2005 @ Mapnik</p>
+          </section>
+
+
+          <section>
+            <h2>Stylesheets</h2>
+            <p>2008 @ Mapnik & Tilemill</p>
+          </section>
+
+          <section>
+            <h2>Sensors</h2>
+            <p>2007 @ OGC</p>
+          </section>
+
+          <section>
+            <h2>Map Content Management</h2>
+            <p>2011 @ CartoDB</p>
+          </section>
+
+          <section>
+            <h2>Model as a service</h2>
+            <p>2010 @ ESMF</p>
+          </section>
+
+          <section>
+            <h2>Earth Engine</h2>
+            <p>2010 @ Google</p>
+          </section>
+          <section>
+            <h2>Interactive models</h2>
+            <p>2014 @ 3Di</p>
+          </section>
+
+          <section>
+            <h2>Future</h2>
+            <ul>
+              <li>Sensors</li>  
+              <li>Push/Messages</li>
+              <li>Global processing</li>
+              <li>Model setup</li>
+            </ul>
+          </section>
+          
+        </section>
+
+        <section>
+          <section>
+            <h1>OGC Service</h1>
+          </section>
+          <section>
+            <h2>Web Map Services</h2>
+            <ul>
+              <li>Get map in bitmap form</li>
+              <li>Get information for 1 location</li>
+              <li>Custom bounding box</li>
+              <li>Map rendered by server on request</li>
+              <li>Query by time and elevation</li>
+              <li>Coordinate transformation</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>GetCapabilities</h2>
+            <pre><code><WMS_Capabilities>
+    <Service>
+        <Title>OpenEarth test server</Title>
+        <MaxWidth>2048</MaxWidth>
+    </Service>
+    <Capability>
+        <Request>
+            <GetMap>
+                <Format>image/png</Format>
+                <DCPType><HTTP><Get><OnlineResource xlink:type="simple" xlink:href="http://dtvirt5.deltares.nl:8080/thredds/wms/opendap/knmi/etmgeg/etmgeg_391.nc"/></Get></HTTP></DCPType>
+            </GetMap>
+        </Request>
+        <Layer>
+            <CRS>EPSG:4326</CRS>
+            <Title>daily averaged meteo parameter.</Title>
+        </Layer>
+    </Capability>
+</WMS_Capabilities>
+</code></pre>
+            
+          </section>
+          <section>
+            <h2>Implementations</h2>
+            <ul>
+              <li>Geoserver</li>
+              <li>Mapserver</li>
+              <li>ncWMS</li>
+              <li>ADAGUC</li>
+            </ul>
+          </section>
+          <section>
+            <h2>GetMap</h2>
+            <p>http://geoport.whoi.edu/thredds/wms/bathy/srtm30plus_v6?</p>
+              <p>service=WMS&</p>
+              <p>request=GetMap&</p>
+              <p>layers=topo&</p>
+              <p>version=1.3.0&</p>
+              <p>CRS=epsg:4326&</p>
+              <p>bbox=50,0,55,10&</p>
+              <p>width=256&height=256&</p>
+              <p>styles=&</p>
+              <p>format=image/png</p>
+          </section>
+          
+          <section>
+            <h2>Example</h2>
+            <p>http://geoport.whoi.edu/thredds/wms/bathy/srtm30plus_v6</p>
+          </section>
+          <section>
+            <h2>Extensions</h2>
+            <ul>
+              <li>COLORSCALERANGE</li>
+              <li>LOGSCALE</li>
+            </ul>
+          </section>
+          <section>
+            <h2>WMTS</h2>
+            <img src="figures/tiles.png" alt="" />
+          </section>
+          <section>
+            <h2>UTFGrid</h2>
+            <img src="figures/utfgrid.jpg" alt="" />
+          </section>
+          <section>
+            <h2>Challenges</h2>
+            <p><a href="http://siggyf.github.io/video.html">Video</a></p>
+            <p>Streaming</p>
+            <p>Voxels</p>
+          </section>
+        </section>
+        <section>
+          <section><h2>Vector</h2></section>
+          <section>
+            <h2>Everything is a feature</h2>
+            <img src="figures/features.png" alt="" />
+          </section>
+          
+
+          <section>
+            <blockquote>The question "What is a feature?"
+              leads directly to a philosophical rabbit hole which deposits the unwary
+              questioner in a wonderland from which it is difficult to return.</blockquote>
+            <p>Nordgren, 2006</p>
+          </section>
+          <section>
+            <h2>Web Feature Service</h2>
+            <ul>
+              <li>Get list of features</li>
+              <li>Get table with feature info</li>
+              <li>Custom bounding box</li>
+              <li>Not rendered</li>
+              <li>Coordinate transformation</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>GetFeature</h2>
+            <p>http://geo.vliz.be/geoserver/wfs?</p>
+            <p>request=GetFeature&</p>
+            <p>service=wfs&</p>
+            <p>typeName=World:worldcities&</p>
+            <p>bbox=51,2,55,5&</p>
+          </section>
+          
+        </section>
+        <section>
+          <section>
+            <h2>Coverages</h2>
+            <blockquote>Feature that acts as a function to return values from its range for any direct position within its
+              spatiotemporal domain</blockquote>
+            <p>a grid</p>
+          </section>
+          
+          <section>
+            <h2>Web Coverage Service</h2>
+            <ul>
+              <li>Get a grid file</li>
+              <li>Custom bounding box</li>
+              <li>Not rendered</li>
+              <li>Coordinate transformation</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>GetCoverage</h2>
+            <p>http://geoport.whoi.edu/thredds/wcs/bathy/srtm30plus_v6?</p>
+            <p>request=GetCoverage</p>
+            <p>&version=1.0.0</p>
+            <p>&service=WCS</p>
+            <p>&format=geotiff</p>
+            <p>&coverage=topo</p>
+            <p>&BBOX=0,50,10,55</p>
+          </section>
+          
+          <section>
+            <h2>Other services</h2>
+            <ul>
+              <li>Sensor Observation Service</li>
+              <li>Web Coverage Processing Service</li>
+              <li>Open Model Interface</li>
+              <li>Catalogue Service for the Web</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Client libraries</h2>
+            <ul>
+              <li>OGR/GDAL (C,python,R)</li>
+              <li>OWSLib (python)</li>
+              <li>geotools (java)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Client software</h2>
+            <ul>
+              <li>QGis (desktop)</li>
+              <li>uDig (desktop)</li>
+              <li>Leaflet (web)</li>
+              <li>OpenLayers (web)</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Web Processing Services</h1>
+          </section>
+          <section>
+            <h2>Processes</h2>
+            <ul>
+              <li>Call a function</li>
+              <li>Define input variables/files</li>
+              <li>Define output variables/files</li>
+              <li>Custom bounding box</li>
+              <li>Can be rendered or not</li>
+              <li>Start process</li>
+              <li>Chain processes</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Implementations</h2>
+            <ul>
+              <li>Zoo</li>
+              <li>PyWPS</li>
+              <li>Geoserver</li>
+              <li>52North</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Tide Example</h2>
+          </section>
+          <section>
+            <h2>Implementing a process</h2>
+            <pre><code>
+class Process(WPSProcess):
+    def __init__(self):
+        WPSProcess.__init__(self, "tidal_predict",
+            title="Tidal prediction tool")
+    def execute(self):
+        """execute a tidal prediction"""
+        date = self.date.getValue()
+        location = self.location.getValue()
+        df = openearthtools.physics.tide.predict(location, date=date)
+        self.tide.setValue(df.to_json())
+  </code></pre>
+          </section>
+          <section>
+            <h2>Missing features</h2>
+            <ul>
+              <li>Stop a process (2.0)</li>
+              <li>Constrain spatial types as input</li>
+              <li>REST (2.0)</li>
+              <li>Layout hints</li>
+              <li>Push</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h1>Excercises</h1>
+        </section>
+        <section>
+          <h1>Optional excercises</h1>
+          
+        </section>
+        <section>
+          <h2>OWSLib</h2>
+        </section>
+        <section>
+          <h2>Sensor</h2>
+        </section>
+        <section>
+          <h2>Tide</h2>
+        </section>
+        <section>
+          <h1><i class="fa fa-glass"></i></h1>
+        </section>
+      </div>
+    </div>
+    <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="bower_components/reveal.js/js/reveal.min.js"></script>
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+          controls: true,
+          progress: true,
+          history: true,
+          center: true,
+
+          theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+          transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+          // Optional libraries used to extend on reveal.js
+          dependencies: [
+	      { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+	      { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	      { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+	      { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+	      { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+	      { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+	      // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+	      // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+          ]
+      });
+
+    </script>
+
+  </body>
+</html>
